@@ -26,17 +26,18 @@
             ];
           };
         formatter = pkgs.alejandra;
-
-        templates = {
-          rust-base = {
-            path = ./templates/rust-base;
-            description = "Basic Rust flake setup";
-          };
-          go-base = {
-            path = ./templates/go-base;
-            description = "Basic Go flake setup";
-          };
-        };
       }
-    );
+    )
+    // {
+      templates = {
+        rust-base = {
+          path = ./templates/rust-base;
+          description = "Basic Rust flake setup";
+        };
+        go-base = {
+          path = ./templates/go-base;
+          description = "Basic Go flake setup";
+        };
+      };
+    };
 }
