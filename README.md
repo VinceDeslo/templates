@@ -8,13 +8,13 @@ These flakes currently don't pin any specific versions of the toolchains, the go
 ## Rust
 
 ```
-nix flake init -t 'github:vincedeslo/templates#rust-base'
+nix flake init -t 'github:VinceDeslo/templates#rust-base'
 cargo init .
 ```
 
 ## Go
 
 ```
-nix flake init -t 'github:vincedeslo/templates#go-base'
+nix flake init -t 'github:VinceDeslo/templates#go-base'
 go mod init .
 ```
