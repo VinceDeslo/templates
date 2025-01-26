@@ -1,21 +1,24 @@
 {
-  description = "VinceDeslo's flake templates";
+  description = "Go base flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    zig-overlay.url = "github:mitchellh/zig-overlay";
   };
 
   outputs = {
     self,
     nixpkgs,
     flake-utils,
+    zig-overlay,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
+        zig = zig-overlay.packages.${system}.default;
         pkgs = import nixpkgs {
-          inherit system;
+          inherit system zig;
         };
       in {
         devShells.default = with pkgs;
@@ -23,25 +26,10 @@
             buildInputs = [
               just
               alejandra
+              zig
             ];
           };
         formatter = pkgs.alejandra;
       }
-    )
-    // {
-      templates = {
-        rust-base = {
-          path = ./templates/rust-base;
-          description = "Basic Rust flake setup";
-        };
-        go-base = {
-          path = ./templates/go-base;
-          description = "Basic Go flake setup";
-        };
-        zig-base = {
-          path = ./templates/zig-base;
-          descriptions = "Basic Zig flake setup";
-        };
-      };
-    };
+    );
 }
