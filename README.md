@@ -16,7 +16,7 @@ cargo init .
 
 ```
 nix flake init -t 'github:VinceDeslo/templates#go-base'
-go mod init .
+go mod init github.com/VinceDeslo/...
 ```
 
 ## Zig 
