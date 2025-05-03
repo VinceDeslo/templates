@@ -2,7 +2,7 @@
 
 ```bash
 nixd
-zig init . # sets up boilerplate
+zig init # sets up boilerplate
 just fmt
 just run
 ```
