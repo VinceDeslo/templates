@@ -27,6 +27,7 @@
               just
               alejandra
               rust-bin.stable.latest.default
+              rust-analyzer
             ];
           };
         formatter = pkgs.alejandra;
