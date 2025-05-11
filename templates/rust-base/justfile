@@ -1,9 +1,11 @@
 __default:
     just --list
 
+# Format flake and code
 fmt:
     alejandra .
     cargo fmt
 
+# Run project locally
 run:
     cargo run --quiet

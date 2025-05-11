@@ -1,9 +1,11 @@
 __default:
     just --list
 
+# Format flake and code
 fmt:
     alejandra .
     zig fmt .
 
+# Run project locally
 run:
     zig build run
