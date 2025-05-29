@@ -38,6 +38,10 @@
           path = ./templates/go-base;
           description = "Basic Go flake setup";
         };
+        python-base = {
+          path = ./templates/python-base;
+          descriptions = "Basic Python flake setup";
+        };
         zig-base = {
           path = ./templates/zig-base;
           descriptions = "Basic Zig flake setup";

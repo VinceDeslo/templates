@@ -1,0 +1,11 @@
+__default:
+    just --list
+
+# Format flake and code
+fmt:
+    alejandra .
+    uv run ruff check
+
+# Run project locally
+run:
+    uv run main.py
