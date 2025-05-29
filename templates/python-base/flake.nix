@@ -23,6 +23,7 @@
             buildInputs = [
               just
               alejandra
+              python313
               uv
               ruff
             ];
