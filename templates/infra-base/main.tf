@@ -1,3 +1,3 @@
-module "resource" {
-  source = "./modules/module"
-}
+# module "resource" {
+#   source = "./modules/module"
+# }

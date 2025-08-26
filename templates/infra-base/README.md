@@ -1,4 +1,4 @@
-# tf-base
+# infra-base
 
 ```bash
 nixd
