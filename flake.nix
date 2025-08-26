@@ -40,11 +40,15 @@
         };
         python-base = {
           path = ./templates/python-base;
-          descriptions = "Basic Python flake setup";
+          description = "Basic Python flake setup";
         };
         zig-base = {
           path = ./templates/zig-base;
-          descriptions = "Basic Zig flake setup";
+          description = "Basic Zig flake setup";
+        };
+        infra-base = {
+          path = ./templates/infra-base;
+          description = "Basic Infrastructure flake setup";
         };
       };
     };

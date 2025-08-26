@@ -1,6 +1,6 @@
 # Templates
 
-These templates are intended to set up boilerplate so that I can quickly spin up some personal dev environments when playing around with tech.
+These templates are intended to set up boilerplate to quickly spin up some personal dev environments when playing around with tech.
 
 ### Setup
 
@@ -16,6 +16,9 @@ nix flake init -t 'github:VinceDeslo/templates#python-base'
 
 # Scaffold Zig boilerplate
 nix flake init -t 'github:VinceDeslo/templates#zig-base'
+
+# Scaffold Infra boilerplate
+nix flake init -t 'github:VinceDeslo/templates#infra-base'
 ```
 
 ### Long term
